@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   User.findById(req.params.id, (err, data) => {
-    res.json(data);
+    res.json(data); // Especificar que vamos a devolver un objeto json
   });
 });
 
@@ -21,7 +21,7 @@ router.delete("/:id", async (req, res) => {
 
 router.post("/", (req, res) => {
   user = new User({
-    name: req.body.name,
+    name: req.body.name, // body recibe los datos que me esta enviando el fronend
     ubicacion: req.body.ubicacion,
     telefono: req.body.telefono,
   });
