@@ -1,6 +1,6 @@
 const express = require("express");
-const User = require("../models/index");
-const router = express.Router();
+const User = require("../models/index"); //Importamos la BD
+const router = express.Router(); //Direccionamiento hace referencia a la definición de puntos finales de aplicación (URI
 
 router.get("/", (req, res) => {
   User.find({}, (err, data) => {

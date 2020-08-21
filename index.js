@@ -24,6 +24,7 @@ const host = process.env.HOST || "0.0.0.0";
 
 const port = process.env.PORT || 80;
 
+// Vincula y escucha conexiones en el host y puerto especificados
 app.listen(port, host, () => {
   //Esto nos servira en HEroku para saber que todo va ok
   console.log("El servidor esta funcionanco perfectamente!");
