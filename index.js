@@ -1,12 +1,12 @@
-const express = require("express");
-const mongoose = require("mongoose");
+const express = require("express");//Framework de servidor 
+const mongoose = require("mongoose");//Modulo de conexion a la BD de mongo
 const cors = require("cors");
 
 //Importar variables de entorno
 require("dotenv").config({ path: "variables.env" });
 
-//Asignamos la variable de entorno de la DB
-mongoose.connect(process.env.DB_URL, {
+//Sirve para conectarse a la BD
+mongoose.connect(process.env.DB_URL, {//Asignamos la variable de entorno de la DB
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
