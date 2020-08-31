@@ -25,7 +25,7 @@ router.post("/", (req, res) => {
     ubicacion: req.body.ubicacion,
     telefono: req.body.telefono,
   });
-  user.save(() => {
+  user.save(() => {//Para guardar en la BD 
     res.json(user);
   });
 });
